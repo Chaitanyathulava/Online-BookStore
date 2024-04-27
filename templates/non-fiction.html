@@ -1,0 +1,285 @@
+{% extends 'home.html' %}
+
+{% load static %}
+
+{% block child1 %}
+<style>
+/* Base styles for the gallery container */
+div.gallery {
+  border: none; /* No border by default */
+  overflow: hidden; /* Hides anything outside the container */
+}
+
+div.gallery:hover {
+  border: 1px solid #777; /* Optional: subtle border on hover for emphasis */
+}
+
+/* Styles for images within the gallery */
+div.gallery img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures no extra space at the bottom of the image */
+  transition: transform 0.3s ease; /* Smooth transformation upon hover */
+}
+
+/* Description styles */
+div.desc {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Responsive container for each item */
+.responsive {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Overlay styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0; /* Overlay covers the image right from the start */
+  width: 0; /* Start with zero width and expand on hover */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  overflow: hidden;
+  transition: width 0.5s ease; /* Smooth transition for the overlay width */
+}
+
+.responsive:hover .overlay {
+  width: 100%; /* Expand overlay to cover the full image on hover */
+}
+
+/* Text styling inside the overlay */
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Button styles within the overlay */
+.button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition for the button */
+}
+
+.button:hover {
+  background-color: #45a049; /* Dark green background on hover */
+}
+
+/* Ensures a smooth scale effect on hover over the images */
+div.gallery:hover img {
+  transform: scale(1.1);
+}
+
+</style>
+<body>
+
+<h2 style="font-style: oblique; text-align: center;">Non-Fictional Books</h2>
+
+
+
+<div class="content1">
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+        <img src="{% static 'nfiction1.jpg' %}" alt="Cinque Terre" width="600" height="400">
+    </a>
+       <div class="overlay">
+    <div class="text"><h1>BABU BANGLADESH</h1>
+A biographer begins to document the life of an enigmatic and controversial political luminary - Babu, also known as 'Babu Bangladesh'. In unearthing the story of a man whom many thought was the leader of his generation, he begins to uncover the story of a nation itself.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">BABU BANGLADESH<br>
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction2.jpg' %}" alt="Forest" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Bombay Cinema's Islamicate Histories
+</h1>
+The first section, 'Islamicate Histories', charts the historical roots of South Asian Muslim cultures and the precursors of Bombay cinema's Islamicate idioms in the Urdu Parsi Theatre; the courtesan cultures of Lucknow; the traditions of miniature painting; the literary, musical and performance traditions of north ...</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Bombay Cinema's Islamicate Histories
+      </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction3.jpg' %}" alt="Northern Lights" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Autobiography of a Yogi</h1>
+The book describes Yogananda's childhood family life, his search for his guru, Swami Sri Yukteswar Giri, the establishment of his first school, Yogoda Satsanga Brahmacharya Vidyalaya, and his journey to America where he lectured to thousands, established Self-Realization Fellowship and visited Luther Burbank.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Autobiography of a Yogi<br>
+
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction4.jpg' %}" alt="Mountains" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Tiger of Drass: Capt. Anuj Nayyar, 23, Kargil Hero</h1>
+During the attack on the fourth bunker, the twenty-three-year-old captain was hit by an enemy rocket-propelled grenade, dying instantly but saving the lives of fifteen men in the process, who eventually finished the mission and hoisted the Indian flag on the peak.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Tiger of Drass: Capt. Anuj Nayyar, 23, Kargil Hero<br>
+          </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction5.jpg' %}" alt="Northern Lights" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Panchtantra Ki Kahaniyan/h1>
+The Panchatantra is a collection of Indian animal stories. Therefore, "Mitra Bheda" (Loss of Friends), "Mitra Laabha" (Gaining Friends), "Suhrud Bheda" (Causing Discord Between Friends), "Vigraha" (Separation," and "Sandhi") are the five principles or practices that are portrayed by the Panchatantra (Union).</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Panchtantra Ki Kahaniyan<br>
+       </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction6.jpg' %}" alt="Northern Lights" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Spoken English</h1>
+Spoken English is nothing but the language we use to communicate with others. People from various backgrounds speak in a variety of accents, for example, an American's speech differs from that of a Canadian or a British person. And another distinction is the presence of utterances in spoken English.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Spoken English<br>
+      </div>
+  </div>
+</div>
+    </div>
+<div class="content2">
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+        <img src="{% static 'nfiction7.jpg' %}" alt="Cinque Terre" width="600" height="400">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Empire of Moghul brothers at war</h1>
+Humayun, the newly-crowned second Moghul Emperor, is a fortunate man. His father, Babur, has bequeathed him wealth, glory and an empire which stretches a thousand miles south from the Khyber pass; he must now build on his legacy, and make the Moghuls worthy of their forebear, Tamburlaine.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Empire of Moghul brothers at war<br>
+       </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction8.jpg' %}" alt="Forest" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Under the banyan tree</h1>
+The concluding story, Under the Banyan Tree, is about a village story-teller who concludes his career by taking a vow of silence for the rest of his life, realizing that a story-teller must have the sense to know when to stop and not wait for others to tell him.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Under the banyan tree<br>
+
+      </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction9.jpg' %}" alt="Northern Lights" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Constitution and its Working</h1>
+A constitution is a set of fundamental rules that determine how a country or state is run. Almost all constitutions are “codified”, which simply means they are written down clearly in a specific document called “the constitution”.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Constitution and its Working<br>
+
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction10.jpg' %}" alt="Mountains" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Satvic Food Book 2</h1>
+A sattvic diet includes foods that are light and healthy. In Ayurvedic practice, sattvic foods are thought to increase energy, happiness, calmness, and mental clarity. In practice, that means eating things that are vegetarian, nutritious, fresh, and tasty.</div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Satvic Food Book 2 <br>
+          </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction11.jpg' %}" alt="Northern Lights" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Invisible empire </h1>
+Invisible Empire: The Story of the Ku Klux Klan 1866-1871 is a historical account written by Stanley F. Horn that delves into the origins and rise of the Ku Klux Klan in the United States. The book provides a detailed analysis of the Klan's formation, its early members and leaders, and the motivation behind its violent and racist actions. Horn traces the Klan's evolution from a small group of Confederate veterans into a powerful organization that terrorized African Americans and other minority groups during the Reconstruction era. </div>
+    <button class="button">Add to Cart</button>
+<a href="#" class="button">Add to cart</a>  </div>
+    <div class="desc">Invisible empire <br>
+       </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="{% static 'nfiction12.jpg' %}" alt="Northern Lights" width="200" height="200">
+    </a>
+      <div class="overlay">
+    <div class="text"><h1>Genetic algorithms</h1>
+The genetic algorithm repeatedly modifies a population of individual solutions. At each step, the genetic algorithm selects individuals from the current population to be parents and uses them to produce the children for the next generation.</div>
+    <button class="button">Add to Cart</button>
+    <a href="#" class="button">Add to cart</a>
+  </div>
+    <div class="desc">Genetic algorithms<br>
+      </div>
+  </div>
+</div>
+    </div>
+{% endblock child1 %}
